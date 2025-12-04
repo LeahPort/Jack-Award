@@ -3,110 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Concierge Award Plaque: Tazeen Tariq</title>
+    <title>Build Concierge Award Plaque: Tirza Tariq</title>
 
     <!-- Load DM Sans -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-    <!-- Load Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        .a5-plaque {
-            width: 560px;
-            height: 794px;
-            box-shadow: 0 12px 40px rgba(5, 40, 57, 0.4);
-            font-family: 'DM Sans', sans-serif;
-            background-color: #F9F6EF;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .color-blue { color: #2E52FE; }
-        .color-dark-blue { color: #052839; }
-        .bg-taupe { background-color: #F9F6EF; }
-
-        .heading-style { line-height: 1.05; letter-spacing: -0.02em; }
-        .body-style { line-height: 1.5; letter-spacing: -0.02em; }
-
-        .citation-block { border-left: 5px solid #2E52FE; }
-
-        .ai-flourish {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            opacity: 0.1;
-            transform: translate(25%, -25%) rotate(45deg);
-            background-color: #2E52FE;
-            z-index: 0;
-        }
-
-        .ai-border {
-            border: 4px solid #2E52FE;
-            background: #FFFFFF;
-            box-shadow: 0 0 15px rgba(46, 82, 254, 0.4);
-            position: relative;
-            z-index: 10;
-        }
-
-        .logo-svg { width: 200px; height: auto; }
+        .a5-plaque { width:560px; height:794px; box-shadow:0 12px 40px rgba(5,40,57,.4); font-family:'DM Sans',sans-serif; background:#F9F6EF; position:relative; overflow:hidden; }
+        .color-blue { color:#2E52FE; }
+        .color-dark-blue { color:#052839; }
+        .bg-taupe { background:#F9F6EF; }
+        .heading-style { line-height:1.05; letter-spacing:-0.02em; }
+        .body-style { line-height:1.5; letter-spacing:-0.02em; }
+        .citation-block { border-left:5px solid #2E52FE; }
+        .ai-flourish { position:absolute; top:0; right:0; width:100px; height:100px; clip-path:polygon(0 0,100% 0,100% 100%,0% 100%); opacity:.1; transform:translate(25%,-25%) rotate(45deg); background:#2E52FE; z-index:0; }
+        .ai-border { border:4px solid #2E52FE; background:#FFF; box-shadow:0 0 15px rgba(46,82,254,.4); position:relative; z-index:10; }
+        .logo-svg { width:200px; height:auto; }
     </style>
-
 </head>
 
 <body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
-
     <div class="a5-plaque rounded-xl">
-
         <div class="ai-flourish"></div>
-
         <div class="ai-border w-full h-full rounded-lg flex flex-col justify-between p-10">
 
-            <!-- TOP SECTION -->
+            <!-- TOP -->
             <div class="flex flex-col items-center text-center">
 
                 <div class="mb-3">
                     <img src="https://www.buildconcierge.com/build-concierge.svg"
-                        onerror="this.onerror=null; this.src='https://placehold.co/200x38/052839/FFFFFF?text=Build.Concierge+Logo'"
-                        alt="Build Concierge Logo"
-                        class="logo-svg">
+                         onerror="this.onerror=null;this.src='https://placehold.co/200x38/052839/FFF?text=Build.Concierge+Logo'"
+                         class="logo-svg"
+                         alt="Build Concierge Logo">
                 </div>
 
+                <!-- Larger Badge -->
                 <div class="color-blue mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 24 24" fill="currentColor">
                         <circle cx="12" cy="8" r="7"/>
                         <polyline points="8.21 13.89 7 23 12 18 17 23 15.79 13.89"/>
                     </svg>
                 </div>
 
-                <h2 class="text-4xl font-bold color-blue heading-style mb-0.5">
-                    The Rising Star Award
-                </h2>
-
-                <p class="text-sm font-medium color-dark-blue mt-3 body-style">
-                    Presented to
-                </p>
+                <h2 class="text-4xl font-bold color-blue heading-style mb-0.5">The Rising Star Award</h2>
+                <p class="text-sm font-medium color-dark-blue mt-3 body-style">Presented to</p>
 
                 <h1 class="text-5xl font-extrabold color-dark-blue heading-style mb-4">
-                    Tazeen Tariq
+                    Tirza Tariq
                 </h1>
             </div>
 
-            <!-- MIDDLE SECTION -->
+            <!-- MIDDLE -->
             <div class="my-4 w-full">
-                <h3 class="text-xs font-semibold color-dark-blue uppercase tracking-wide body-style text-center mb-2">
-                    Reason for Award:
-                </h3>
+                <h3 class="text-xs font-semibold text-center color-dark-blue uppercase tracking-wide mb-2">Reason for Award:</h3>
 
                 <blockquote class="text-bc-dark-blue text-base italic body-style p-4 bg-taupe rounded-lg citation-block shadow-inner mx-auto max-w-md">
-                    "Tazeen has demonstrated remarkable progression and maturity this year. Her attention to detail, her eagerness to grow, and her ability to take on responsibility with confidence have been exceptional. She continues to impress with her commitment, consistency, and the high standard of her work."
+                    "Tirza has shown exceptional growth this year. Her drive to learn, her willingness to take on new challenges, and her increasing confidence have stood out across the organisation. She is dedicated, curious, and consistently raising her own bar. Tirza is on a remarkable upward trajectory."
                 </blockquote>
             </div>
 
-            <!-- BOTTOM SECTION -->
+            <!-- BOTTOM -->
             <div class="color-dark-blue">
 
                 <div class="flex flex-col items-center mt-6 mb-6">
@@ -126,6 +85,5 @@
 
         </div>
     </div>
-
 </body>
 </html>
