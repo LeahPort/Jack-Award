@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Concierge Award Plaque: Jack Pickering</title>
+    <title>Build Concierge Award Plaque: Harry Smithurst</title>
     <!-- Load DM Sans from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <!-- Load Tailwind CSS -->
@@ -14,34 +14,65 @@
             width: 560px;
             height: 794px;
             box-shadow: 0 12px 40px rgba(5, 40, 57, 0.4);
+            /* Set DM Sans as the primary font */
             font-family: 'DM Sans', sans-serif; 
-            background-color: #F9F6EF;
+            background-color: #F9F6EF; /* Taupe */
             position: relative;
             overflow: hidden; 
         }
+        
+        /* Define Brand Blue color variable */
         .color-blue { color: #2E52FE; } 
         .bg-blue { background-color: #2E52FE; }
         .border-blue { border-color: #2E52FE; }
+
+        /* Existing Brand Colors */
         .color-dark-blue { color: #052839; }
         .bg-dark-blue { background-color: #052839; }
         .bg-taupe { background-color: #F9F6EF; }
-        .logo-svg { width: 200px; height: auto; }
-        .heading-style { line-height: 1.05; letter-spacing: -0.02em; }
-        .body-style { line-height: 1.5; letter-spacing: -0.02em; }
-        .citation-block { border-left: 5px solid #2E52FE; }
+
+        .logo-svg {
+            width: 200px; 
+            height: auto;
+        }
+
+        /* Styling for Headings (DM Sans Bold, -2% Letterspacing, 100-110% Line Height) */
+        .heading-style {
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        /* Styling for Body Text (DM Sans 55 Roman, -2% Letterspacing, 150-170% Line Height) */
+        .body-style {
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+        }
+
+        .citation-block {
+            /* Border color: Blue */
+            border-left: 5px solid #2E52FE;
+        }
+
+        /* Subtle AI/Tech Visual Element (Corner flourish) - Blue */
         .ai-flourish {
             position: absolute;
-            top: 0; right: 0;
-            width: 100px; height: 100px;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            /* Geometric shape for AI/Data feel */
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            opacity: 0.1;
-            transform: translate(25%, -25%) rotate(45deg);
+            opacity: 0.1; /* Subtle opacity */
+            transform: translate(25%, -25%) rotate(45deg); /* Move slightly out of view and rotate */
             z-index: 0;
-            background-color: #2E52FE;
+            background-color: #2E52FE; /* Use Blue background */
         }
+
         .ai-border {
+            /* Border color: Blue */
             border: 4px solid #2E52FE;
             background-color: #FFFFFF;
+            /* Glow effect: Blue */
             box-shadow: 0 0 15px rgba(46, 82, 254, 0.4); 
             position: relative;
             z-index: 10;
@@ -53,56 +84,99 @@
                 extend: {
                     colors: {
                         'bc-dark-blue': '#052839',
-                        'bc-blue': '#2E52FE',
+                        'bc-blue': '#2E52FE', 
                         'bc-taupe': '#F9F6EF',
                     },
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'] }
+                    fontFamily: {
+                        // Apply DM Sans throughout the Tailwind configuration
+                        sans: ['DM Sans', 'sans-serif'], 
+                    }
                 }
             }
         }
     </script>
 </head>
 <body class="bg-gray-50 flex items-center justify-center min-h-screen p-4">
+
+    <!-- A5 Award Plaque Container -->
     <div class="a5-plaque rounded-xl">
+        
+        <!-- Subtle AI/Tech Flourish (Blue) -->
         <div class="ai-flourish"></div>
+
+        <!-- Inner Content Border (Blue) -->
         <div class="ai-border w-full h-full rounded-lg flex flex-col justify-between p-10">
+
+            <!-- TOP SECTION -->
             <div class="flex flex-col items-center text-center">
+                <!-- Logo -->
                 <div class="mb-3">
                     <img src="https://www.buildconcierge.com/build-concierge.svg" 
                          onerror="this.onerror=null; this.src='https://placehold.co/200x38/052839/FFFFFF?text=Build.Concierge+Logo'"
                          alt="Build Concierge Logo"
                          class="logo-svg">
                 </div>
+                
+                <!-- Rosette Icon (Filled Blue) -->
                 <div class="color-blue mb-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="lucide lucide-award-filled">
                         <circle cx="12" cy="8" r="7"/>
                         <polyline points="8.21 13.89 7 23 12 18 17 23 15.79 13.89"/>
                     </svg>
                 </div>
-                <h2 class="text-3xl font-bold color-blue heading-style mb-0.5">The Build Concierge Excellence Award</h2>
-                <p class="text-sm font-medium color-dark-blue mb-0 mt-3 body-style">Presented to</p>
-                <h1 class="text-5xl font-extrabold color-dark-blue uppercase heading-style mb-4">Jack Pickering</h1>
+
+                <!-- Award Name (Blue Text) -->
+                <h2 class="text-3xl font-bold color-blue heading-style mb-0.5">
+                    The Transformation Excellence Award
+                </h2>
+
+                <!-- Intro -->
+                <p class="text-sm font-medium color-dark-blue mb-0 mt-3 body-style">
+                    Presented to
+                </p>
+
+                <!-- Winner Name -->
+                <h1 class="text-5xl font-extrabold color-dark-blue uppercase heading-style mb-4">
+                    Harry Smithurst
+                </h1>
             </div>
+
+            <!-- MIDDLE SECTION: Reason -->
             <div class="my-4 w-full">
-                <h3 class="text-xs font-semibold color-dark-blue mb-2 body-style text-center uppercase tracking-wide">Reason for Award:</h3>
+                <h3 class="text-xs font-semibold color-dark-blue mb-2 body-style text-center uppercase tracking-wide">
+                    Reason for Award:
+                </h3>
+                
+                <!-- Citation Block (Blue border left) -->
                 <blockquote class="text-bc-dark-blue text-base body-style italic p-4 bg-taupe rounded-lg citation-block shadow-inner mx-auto max-w-md">
-                    “Jack has been exceptional this year. His technical strength is matched with real entrepreneurial thinking and strong commercial insight. Calm, steady, and completely dependable. His leadership has set the tone across the business and he has earned the trust and respect of everyone. Jack has become indispensable to Build Concierge.”
+                    &ldquo;Harry’s transformation this year has been extraordinary. Moving from internal IT into a customer-facing technical role, he has become best in class at speed. His accuracy, consistency, and the confidence he brings when training and supporting others have made him invaluable. Clients admire him and the team rely on him. Harry has set a new benchmark across the business.&rdquo;
                 </blockquote>
             </div>
+
+            <!-- BOTTOM SECTION: Signature & About -->
             <div class="text-bc-dark-blue">
+                
+                <!-- Signature Block -->
                 <div class="flex flex-col items-center mt-6 mb-6">
                     <div class="w-1/2 border-t-2 border-bc-dark-blue pt-1 mb-0.5"></div>
-                    <p class="text-xs font-bold uppercase tracking-widest body-style text-center">CEO Signature</p>
-                    <p class="text-xs font-medium body-style mt-0.5">Date: December 2025</p>
+                    <p class="text-xs font-bold uppercase tracking-widest body-style text-center">
+                        CEO Signature
+                    </p>
+                    <p class="text-xs font-medium body-style mt-0.5">
+                        Date: December 2025
+                    </p>
                 </div>
+                
+                <!-- About the Award (Blue text for heading) -->
                 <div class="text-center bg-gray-50 p-2 rounded border border-gray-100">
                     <h3 class="font-bold uppercase tracking-widest mb-1 body-style text-[10px] color-blue">About the Award</h3>
                     <p class="text-[10px] leading-tight body-style">
-                        "This award is for someone who delivers excellence every day. Someone who lifts the standard for the whole organisation and represents exactly what Build Concierge stands for."
+                        "This award recognises technical mastery, remarkable professional growth, and a commitment to precision and high standards. Someone who has transformed their role and become a standout performer."
                     </p>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
